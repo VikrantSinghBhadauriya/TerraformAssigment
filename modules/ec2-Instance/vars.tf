@@ -1,5 +1,5 @@
 variable "ami" {
-    default = "t2.micro"
+    default = "ami-04db49c0fb2215364"
   
 }
 variable "subnetId" {
@@ -7,7 +7,7 @@ variable "subnetId" {
   
 }
 variable "instancetype" {
-    default = "ami-04db49c0fb2215364"
+    default = "t2.micro"
   
 }
 

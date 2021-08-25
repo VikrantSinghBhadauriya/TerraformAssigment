@@ -1,6 +1,10 @@
 resource "aws_eip" "elasticIp" {
 
   vpc = true
+ tags = {
+    Name = "TF_ElasticIP"
+  }
+
 }
 
 resource "aws_nat_gateway" "NAT_GateWay" {
