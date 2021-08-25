@@ -1,9 +1,9 @@
 module "networking" {
-  source = "./Modules/Networking"
+  source = "./modules/Networking"
   
 }
 module "Ec2_instance" {
-  source = "./Modules/ec2-Instance"
+  source = "./modules/ec2-Instance"
   subnetId = module.networking.subnetIds
   VPC_ID = module.networking.VPC_ID
 }
