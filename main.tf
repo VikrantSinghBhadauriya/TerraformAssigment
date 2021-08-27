@@ -8,11 +8,11 @@ module "Ec2_instance" {
   VPC_ID   = module.networking.VPC_ID
 }
 module "Postgresql_RDS" {
-  source          = "./modules/RDS"
-  ec2instanceSGId = module.Ec2_instance.ec2instanceSecuritygroupId
-  VPC_ID          = module.networking.VPC_ID
-  dbsubnetId      = module.networking.subnetIds
-  dbusername      = var.dbusername
-  dbpassword      = var.dbpassword
+  source           = "./modules/RDS"
+  ec2instanceSGId  = module.Ec2_instance.ec2instanceSecuritygroupId
+  VPC_ID           = module.networking.VPC_ID
+  dbsubnetGroupIds = module.networking.allPrivateSubnets
+  dbusername       = var.dbusername
+  dbpassword       = var.dbpassword
 
 }

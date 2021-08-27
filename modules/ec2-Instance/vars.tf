@@ -7,7 +7,7 @@ variable "subnetId" {
   
 }
 variable "instancetype" {
-    default = "t2.micro"
+    default = "t2.small"
   
 }
 

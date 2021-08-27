@@ -1,5 +1,6 @@
 resource "aws_subnet" "aws_public_subnet" {
   vpc_id                  = aws_vpc.main.id
+  availability_zone = "ap-south-1b"
   cidr_block              = each.value
   map_public_ip_on_launch = true
   for_each                = var.public_subnet_range

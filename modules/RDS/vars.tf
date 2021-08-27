@@ -8,7 +8,8 @@ variable "ec2instanceSGId" {
     type=string
   
 }
-variable "dbsubnetId" {
+variable "dbsubnetGroupIds" {
+  type=list(string)
   
 }
 

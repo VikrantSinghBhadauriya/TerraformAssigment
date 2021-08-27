@@ -2,7 +2,7 @@ resource "aws_db_instance" "TF_postgres" {
   allocated_storage    = 10
   engine               = "postgres"
   engine_version       = "13.3"
-  db_subnet_group_name=  var.dbsubnetId
+  db_subnet_group_name=  aws_db_subnet_group.TF_subnetGroup.id
   instance_class       = "db.m5.large"
   name                 = "TF_myPostgresdb"
   username             = var.dbusername
