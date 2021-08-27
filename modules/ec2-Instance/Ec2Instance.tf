@@ -2,7 +2,8 @@ resource "aws_instance" "ec2_instance1" {
   ami           = var.ami
   instance_type = var.instancetype
   subnet_id = var.subnetId
-  security_groups = [aws_security_group.ec2instance_securityGroup.id]
+  vpc_security_group_ids  = [aws_security_group.ec2instance_securityGroup.id]
+  key_name = aws_key_pair.TF_keypair.key_name
   tags = {
     Name = "TF_ec2_instance"
   }

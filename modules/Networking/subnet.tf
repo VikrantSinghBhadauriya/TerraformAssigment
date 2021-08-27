@@ -15,7 +15,4 @@ resource "aws_subnet" "aws_private_subnet" {
     Name = "PrivateSubnet-${each.value}"
   }
 }
-output "prublicId" {
-  value = aws_subnet.aws_public_subnet
 
-}
